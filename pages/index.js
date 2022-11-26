@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Flex, Box, Text, Button, LinkOverlay } from "@chakra-ui/react";
+import { Flex, Box, Text, Button } from "@chakra-ui/react";
 
-const Banner = ({ purpose, tittle1, tittle2, desc1, desc2,buttonText, linkname, imageUrl }) => (
+const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-    <Image src={imageUrl} with={"500"} height={"300"} alt="banner" />
+    <Image src={imageUrl} width={"500"} height={"300"} alt="banner" />
     <Box p="5">
       <Text color="gray.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
       <Text fontSize="3xl" fontWeight="bold">{title1}<br/>{title2}</Text>
       <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">{desc1}<br/>{desc2}</Text>
-      <Button fontSize="xl" bg="blue.300" color="white">
-        <Link href={linkname}>{buttonText}</Link>
+      <Button fontSize="xl">
+        <Link href={linkName}>{buttonText}</Link>
       </Button>
     </Box>
   </Flex>
@@ -21,24 +21,24 @@ export default function Home() {
       <h1>Hello World</h1>
       <Banner 
         purpose="RENT A HOME"
-        tittle1="Rental Homes for"
-        tittle2="Everyone"
+        title1="Rental Homes for"
+        title2="Everyone"
         desc1="Explore Apartments, Villas, Homes"
         desc2="and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
-        imageUrl="https://www.pexels.com/photo/modern-building-against-sky-323780/"
+        imageUrl='https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 
       />
       <Banner
         purpose="BUY A HOME"
-        tittle1="Find, Buy & Own Your"
-        tittle2="Dream Home"
+        title1="Find, Buy & Own Your"
+        title2="Dream Home"
         desc1="Explore Apartments, Villas, Homes"
         desc2="and more"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
-        imageUrl="https://www.pexels.com/photo/white-concrete-building-under-sunny-blue-sky-87223/"
+        imageUrl='https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       />
     </div>
   )
