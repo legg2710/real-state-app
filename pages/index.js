@@ -17,8 +17,7 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, i
 )
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <Box>
       <Banner 
         purpose="RENT A HOME"
         title1="Rental Homes for"
@@ -30,6 +29,9 @@ export default function Home() {
         imageUrl='https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 
       />
+      <Flex flexwrap="wrap">
+        {/*fetch*/}
+      </Flex>
       <Banner
         purpose="BUY A HOME"
         title1="Find, Buy & Own Your"
@@ -40,6 +42,6 @@ export default function Home() {
         linkName="/search?purpose=for-sale"
         imageUrl='https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       />
-    </div>
+    </Box>
   )
 }
